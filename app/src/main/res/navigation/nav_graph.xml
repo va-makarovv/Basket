@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             android:id="@+id/nav_graph"
+    app:startDestination="@id/productBasket">
+
+    <fragment
+        android:id="@+id/productBasket"
+        android:name="com.example.myapplication.fragment.ProductBasket"
+        android:label="ProductBasket" >
+        <action
+            android:id="@+id/action_productBasket_to_basketFragment"
+            app:destination="@id/basketFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/basketFragment"
+        android:name="com.example.myapplication.fragment.BasketFragment"
+        android:label="BasketFragment" >
+        <action
+            android:id="@+id/action_basketFragment_to_productBasket"
+            app:destination="@id/productBasket" />
+    </fragment>
+</navigation>
